@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             if (counter == 1) {
                 guess1.text = strValue
+                Log.d(null, strValue)
                 guess1check.text = checkGuess(strValue, word)
             }
             if (counter == 2) {
