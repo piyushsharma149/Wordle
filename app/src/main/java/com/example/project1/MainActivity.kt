@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
             input.getText().clear()
             closeKeyboard(input)
             counter++
+            Log.d(null, word)
 
             if (counter == 1) {
                 guess1.text = strValue
-                Log.d(null, strValue)
                 guess1check.text = checkGuess(strValue, word)
             }
             if (counter == 2) {
@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity() {
             if (counter == 3) {
                 guess3.text = strValue
                 guess3check.text = checkGuess(strValue, word)
-                Log.d(null, counter.toString())
                 answer.visibility = View.VISIBLE
                 reset.visibility = View.VISIBLE
                 reset.setOnClickListener {
@@ -68,6 +67,7 @@ class MainActivity : AppCompatActivity() {
                     answer.text = word
                     answer.visibility = View.INVISIBLE
                     reset.visibility = View.INVISIBLE
+                    counter = 0
                 }
             }
         }
